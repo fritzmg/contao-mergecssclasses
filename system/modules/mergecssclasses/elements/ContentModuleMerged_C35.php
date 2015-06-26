@@ -8,15 +8,8 @@
  * @license LGPL-3.0+
  */
 
-namespace Contao;
 
-
-/**
- * Front end content element "module".
- *
- * @author Leo Feyer <https://github.com/leofeyer>
- */
-class ContentModule extends \ContentElement
+class ContentModuleMerged extends \ContentModule
 {
 
 	/**
@@ -50,21 +43,23 @@ class ContentModule extends \ContentElement
 		/** @var \Module $objModule */
 		$objModule = new $strClass($objModule, $this->strColumn);
 
+		// create new cssID array
+		$cssID = array();
+
+		// set the ID
+		$cssID[0] = $this->cssID[0]?: $objModule->cssID[0];
+
+		// merge the classes
+		$arrElementClasses = explode( ' ', $this->cssID[1] );
+		$arrModuleClasses = explode( ' ', $objModule->cssID[1] ); 
+		$cssID[1] = implode( ' ', array_unique( array_merge( $arrModuleClasses, $arrElementClasses ) ) );
+
 		// Overwrite spacing and CSS ID
 		$objModule->origSpace = $objModule->space;
 		$objModule->space = $this->space;
 		$objModule->origCssID = $objModule->cssID;
-		$objModule->cssID = $this->cssID;
+		$objModule->cssID = $cssID;
 
 		return $objModule->generate();
-	}
-
-
-	/**
-	 * Generate the content element
-	 */
-	protected function compile()
-	{
-		return;
 	}
 }

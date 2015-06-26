@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Contao Open Source CMS
+ *
+ * Copyright (c) 2005-2015 Leo Feyer
+ *
+ * @license LGPL-3.0+
+ */
+
+
 class ContentModuleMerged extends \ContentModule
 {
 
@@ -40,7 +49,7 @@ class ContentModuleMerged extends \ContentModule
 		// merge the classes
 		$arrElementClasses = explode( ' ', $this->cssID[1] );
 		$arrModuleClasses = explode( ' ', $objModule->cssID[1] ); 
-		$cssID[1] = implode( ' ', array_unique( array_merge( $arrElementClasses, $arrModuleClasses ) ) );
+		$cssID[1] = implode( ' ', array_unique( array_merge( $arrModuleClasses, $arrElementClasses ) ) );
 
 		// Overwrite spacing and CSS ID
 		$objModule->space = $this->space;
