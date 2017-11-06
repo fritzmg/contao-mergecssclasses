@@ -1,3 +1,7 @@
+[![](https://img.shields.io/maintenance/yes/2015.svg)](https://github.com/fritzmg/contao-mergecssclasses)
+[![](https://img.shields.io/packagist/v/fritzmg/contao-mergecssclasses.svg)](https://packagist.org/packages/fritzmg/contao-mergecssclasses)
+[![](https://img.shields.io/packagist/dt/fritzmg/contao-mergecssclasses.svg)](https://packagist.org/packages/fritzmg/contao-mergecssclasses)
+
 Contao Merge CSS Classes
 ===================
 
