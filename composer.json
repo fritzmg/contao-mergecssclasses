@@ -1,37 +1,36 @@
 {
-	"name":"fritzmg/contao-mergecssclasses",
-	"description":"Small extension for Contao to automatically merge CSS classes in included elements",
-	"keywords":["contao", "merge", "include" , "classes", "css"],
-	"type":"contao-module",
-	"homepage":"http://www.inspiredminds.at",
-	"license":"GPL-2.0",
-	"authors":[
-		{
-			"name":"Fritz Michael Gschwantner",
-			"homepage":"http://www.inspiredminds.at",
-			"email":"fmg@inspiredminds.at",
-			"role":"Developer"
-		}
-	],
-	"support":{
-		"email":"fmg@inspiredminds.at",
-		"issues":"https://github.com/fritzmg/contao-mergecssclasses/issues",
-		"source":"https://github.com/fritzmg/contao-mergecssclasses",
-		"forum":"https://community.contao.org/de"
-	},
-	"require":{
-		"php":">=5.2",
-		"contao/core":">=3.1,<4",
-		"contao-community-alliance/composer-installer":"*"
-	},
+    "name": "fritzmg/contao-mergecssclasses",
+    "description": "Small extension for Contao to automatically merge CSS classes in included elements",
+    "keywords": ["contao", "merge", "include" , "classes", "css"],
+    "type": "contao-module",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Fritz Michael Gschwantner",
+            "homepage": "http://www.inspiredminds.at",
+            "email": "fmg@inspiredminds.at",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "fmg@inspiredminds.at",
+        "issues": "https://github.com/fritzmg/contao-mergecssclasses/issues",
+        "source": "https://github.com/fritzmg/contao-mergecssclasses",
+        "forum": "https://community.contao.org/de"
+    },
+    "require": {
+        "php": ">=5.2",
+        "contao/core": ">=3.1,<4",
+        "contao-community-alliance/composer-installer": "*"
+    },
     "replace": {
         "contao-legacy/mergecssclasses": "self.version"
     },
-	"extra":{
-		"contao":{
-			"sources":{
-				"system/modules/mergecssclasses":"system/modules/mergecssclasses"
-			}
-		}
-	}
+    "extra": {
+        "contao": {
+            "sources": {
+                "system/modules/mergecssclasses": "system/modules/mergecssclasses"
+            }
+        }
+    }
 }
